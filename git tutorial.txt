@@ -1,0 +1,4 @@
+
+git add forth.html    or git add. << 先add新的file 如果你的repository沒有新file的話
+git commit -m "forth commit"   提交這是第幾次commit
+git push -u      上傳push上去
