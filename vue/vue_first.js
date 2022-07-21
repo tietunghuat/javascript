@@ -1,12 +1,28 @@
-const { createApp } = Vue
+const { createApp, ref } = Vue
 
-createApp({
+const vm=Vue.createApp({
     data() {
+        const message=ref("Hello Vue!!!")
+        const message2=ref("It's me!")
+        const message3=ref("King James!")
         return {
-            message: 'Hello Vue!',
-            message2: 'It’s me!',
-            message3: 'King James！'
-            
+            message,
+            message2,
+            message3, 
         }
     }
-}).mount('#first')
+})
+vm.mount('#first')
+
+const am = Vue.createApp({
+    data() {
+        const price = ref(50)
+        const quantity = ref(23)
+        return {
+            price,
+            quantity
+        }
+    }
+})
+
+am.mount('#app')

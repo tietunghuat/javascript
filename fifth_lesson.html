@@ -8,10 +8,10 @@
 </head>
 <body>
 
-
-
+        
+    <!--Vue 3.x-->
     <script src="https://unpkg.com/vue@3"></script>
-    
+   
     <div id="first">
         <h1>{{ message }}</h1>
         <h1>{{ message2 }}</h1>
@@ -20,10 +20,15 @@
         <input v-model="message">
 
     </div>
+
+    <div id="app">
+        <p>Price = {{ price }}</p>
+        <p>Quantity = {{ quantity }} </p>
+        <b><p>Total price: {{ price * quantity }} !!</p></b>
+    </div>
     
-    <script src="vue/vue_first.js">
- 
-    </script>
+    <script src="vue/vue_first.js"></script>
+    
 </body>
 
 </html> 
