@@ -26,3 +26,14 @@ const am = Vue.createApp({
 })
 
 am.mount('#app')
+
+const bm=Vue.createApp({
+    data(){
+        return{
+            celi:""
+        }
+    }
+}).mount("#cm")
+bm.$data.celi="30cm"
+//const vMountedInstance=bm.mount("#cm")
+//vMountedInstance.$data.celi="30cm"
