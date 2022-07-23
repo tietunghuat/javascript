@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<script src="https://unpkg.com/vue@3"></script>
+<body>
+        <div id="coin">
+            <p>1 Japan = 0.278 NTD</p>
+            <div>台幣<input type="text" v-model="twd"></div>
+            <div>日幣<input type="text" v-model="jpy"></div>
+            <div>美金<input type="text" v-model="usdt"></div>
+        
+        </div>
+        
+        <div id="app1">
+            <p v-bind:id="customId "></p>
+        </div>
+
+        <div id="app2">
+        <button v-bind:disable="isBtnDisable">HAHA</button>
+        <img v-bind:src="pic" v-bind:style="ww">
+        </div>
+
+        <div id="app3">
+            <input type="text" v-model="message" placeholder="Edit me!">
+            <b><p>{{message}}</p></b>
+            <textarea v-model="text" placeholder="Write here!"></textarea>
+        </div>
+    <script src="vue/vue_eighth.js"></script>
+</body>
+</html>
