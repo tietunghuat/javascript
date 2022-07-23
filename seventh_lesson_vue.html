@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7</title>
+</head>
+<script src="https://unpkg.com/vue@3"></script>
+<body>
+    <div id="app1">
+        <p>{{price}} and {{quantity}} = {{subtotal}}</p>
+
+        <p>{{price}} and {{quantity}} = {{subtotal1()}}</p>
+   
+
+        <div id="coin">
+            <p>1 Japan = 0.278 NTD</p>
+            <div>台幣<input type="text" v-model="twd" v-on:input="twd2jp"></div>
+            <div>日幣<input type="text" v-model="jp" v-on:input="jp2twd"></div>
+             
+        </div>
+
+    </div>
+    
+
+    <script src="vue/vue_seventh.js"></script>
+</body>
+</html>
