@@ -8,9 +8,14 @@
 </head>
 <script src="https://unpkg.com/vue@3"></script>
 <body>
-    <div id="temp"></div>
-    
-    
+    <!-- <div id="temp"></div> -->
+    <div id="app1">
+        <div>台幣<input type="text" v-model="twd"></div>
+        <div>日幣<input type="text" v-model="jpy"></div>
+
+        <div v-bind:id="customerid"><p></p></div>
+    </div>
+
 
 
 
