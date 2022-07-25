@@ -30,6 +30,41 @@
             <b><p>{{message}}</p></b>
             <textarea v-model="text" placeholder="Write here!"></textarea>
         </div>
+
+        <div id="app4">
+            <input type="radio" id="one" value="1" v-model="picked">
+            <input type="radio" id="two" value="2" v-model="picked2">
+        </div>
+        <br>
+        <div id="app5">  
+            <input type="checkbox" id="checkboxone" value="1" v-model="picked">
+            <input type="checkbox" id="checkboxone2" value="2" v-model="picked">
+            <input type="checkbox" id="checkboxone3" value="3" v-model="picked">
+            <input type="checkbox" id="checkboxone4" value="4" v-model="picked">
+            <p>Checked names: {{picked}}</p>
+        </div>
+        <p>-----------</p>
+        <br>
+        <div id="app6">
+            <input type="checkbox" id="checkboxone"  v-model="picked">
+            <input type="checkbox" id="checkboxone" v-model="picked2">
+            <input type="checkbox" id="checkboxone" v-model="picked3">
+            <input type="checkbox" id="checkboxone" v-model="picked4">
+            <p>Checked names: {{picked}}</p>
+        </div>
+
+
+        <div id="app7">
+            <select v-model="selected">
+                <option disable value="">Please choose</option>
+                <option value="taipei">taipei</option>
+                <option value="taizhong">taizhong</option>
+                <option value="tainan">tainan</option>
+                <option value="taiyuan">taoyuan</option>
+                <option value="kaohsiong">kaohsiong</option>
+            </select>
+            <p>   You picked:: {{selected}}</p>
+        </div>
     <script src="vue/vue_eighth.js"></script>
 </body>
 </html>

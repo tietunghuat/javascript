@@ -61,3 +61,40 @@ const cm = Vue.createApp({
         }
     }
 }).mount("#app3")
+
+
+const dm=Vue.createApp({
+    data(){
+        return{
+            picked:1
+ 
+        }
+    }
+}).mount("#app4")
+
+const em=Vue.createApp({
+    data(){
+        return{
+            picked:[1,2,4]
+        }
+    }
+}).mount("#app5")
+
+const fm = Vue.createApp({
+    data() {
+        return {
+            picked:true,
+            picked2:false,
+            picked3:true,
+            picked4:true
+        }
+    }
+}).mount("#app6")
+
+const gm=Vue.createApp({
+    data(){
+        return{
+            selected:""
+        }
+    }
+}).mount("#app7")
