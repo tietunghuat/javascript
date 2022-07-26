@@ -16,6 +16,32 @@
         <div v-bind:id="customerid"><p></p></div>
     </div>
 
+    <div id="app2">
+
+        <input type="radio" value="1" v-model="picked"> one
+    </div>
+
+    <div id="app3">
+
+        <input type="checkbox" value="1"  v-model="picked">taiwan
+        <input type="checkbox" value="2" v-model="picked">china
+        <input type="checkbox" value="3" v-model="picked">singapore
+        <input type="checkbox" value="4" v-model="picked">usa
+        <input type="checkbox" value="5" v-model="picked">uk
+    </div>
+
+    <div id="app4">
+        <select v-model="selected">
+            <option disabled value="" >Please choose one</option>
+            <option value="Tainan">Tainan</option>
+            <option value="kaohsiong">kaohsiong</option>
+            <option value="Taipei">Taipei</option>
+            <option value="Taizhung">Taizhung</option>
+        </select>
+        <p>You picked : {{ selected }}</p>
+
+    </div>
+
 
 
 

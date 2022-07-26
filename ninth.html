@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .normal{
+            font-style:bold;
+            color:blue;
+        }
+        .error{
+            
+            font-style: italic;
+            color: red;
+        }
+    </style>
+</head>
+    <script src="https://unpkg.com/vue@3"></script>
+<body>
+    
+    <div id="app1">
+        11<input v-model.number="num1">
+        22<input v-model.number="num2">
+        33<input v-model.trim="num3">
+        <p>total is:: {{sum}}</p>
+
+    </div>
+
+    <div id="app2">
+        <p>{{text}}</p>
+        <p v-text="text"> world</p>
+        <p v-html="text"> usa</p>
+        <input type="text" v-model.trim="message" v-bind:class="{'normal':message.length<10,'error':message.length>10}"> 
+        
+
+    </div>
+
+    <div id="app3">
+        <input type="text" v-model="content" :style="msgstyle"> Trying with new function
+    
+
+
+    </div>
+    <script src="vue/vue_ninth.js"></script>
+</body>
+</html>

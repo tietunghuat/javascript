@@ -36,3 +36,31 @@ const am=Vue.createApp({
     }
 }).mount("#app1")
 
+
+const bm=Vue.createApp({
+    data()
+    {
+        return{
+            picked:1
+        }
+    }
+}).mount("#app2")
+
+const cm = Vue.createApp({
+    data() {
+        return {
+            picked: [1]
+        }
+    }
+}).mount("#app3")
+
+const dm = Vue.createApp({
+    data() {
+        return {
+            selected:""
+        }
+    }
+}).mount("#app4")
+
+
+
