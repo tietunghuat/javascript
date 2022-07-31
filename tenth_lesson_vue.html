@@ -22,6 +22,7 @@
             color:red;
             background-color: black;
         }
+
     </style>
 </head>
 <body>
@@ -38,10 +39,25 @@
 
     <div id="app2">
         <div><p>{{msg}}</p></div>
-        <div class="outer" @click="alert('outer')">
+        <div class="outer" @click.capture.once="alert('outer')">
             <span>Outer</span>
             <div class="inner" v-on:click.stop="alert('inner')">Inner</div>
         </div>
+    </div>
+
+    <div id="app3">
+        <h1>你現在按的Key是 : {{presskey}}
+        </h1>
+        <br>
+        <input type="text" @keyup="press" placeholder="Key here">press any key
+    </div>
+    <br>
+    <div id="app4">
+        <div id="column" :style="dd" > 
+           <div v-for="m in message">{{m}}</div>
+        </div>
+
+        <div><input type="text" v-model.trim="msg" @keydown.enter="addtomessage" placeholder="Type here and press enter"></div>
     </div>
     
 </body>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue_Review</title>
     <style>
         .error{
             font-size: 50px;
@@ -59,8 +59,17 @@
         <p>Count : {{count}}</p>
         <button v-on:click="plus(amount,$event)">Click me</button>
     </div>
+    <br>
 
+    <div id="app3">
+        <div :style="column">
+            <div v-for="m in message"> {{m}}</div>
+        </div>
 
+        <input type="text" v-model.trim="add" @keydown.enter="addtom" placeholder="type here">
+    </div>
+
+    
 
     <script src="vue/vue_review.js"></script>
 </body>

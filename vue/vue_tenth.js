@@ -47,3 +47,37 @@ const cm = Vue.createApp({
         }
     }
 }).mount("#app2")
+
+const em=Vue.createApp({
+    data(){
+        return{
+            presskey:""
+        }
+    },
+    methods:{
+        press(event)
+        {
+        
+                this.presskey = event.key;
+              
+            }
+        }
+    
+}).mount("#app3")
+
+const fm=Vue.createApp({
+    data(){
+        return{
+            msg:"",
+            message:[],
+            dd: "border: 2px solid black;width: 200px;height: 150px ; "
+        }
+    },
+    methods:{
+        addtomessage(){
+            this.message.push(this.msg)
+            this.msg=""
+        }
+
+    }
+}).mount("#app4")

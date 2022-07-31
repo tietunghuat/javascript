@@ -23,6 +23,22 @@ const am=Vue.createApp({
         }
     }
 }).mount("#app2")
+
+const zm=Vue.createApp({
+    data(){
+        return{
+            column:"border:black solid 3px;width:150px;height:180px;",
+            message:[]
+        }
+    },
+    methods:{
+        addtom(){
+            this.message.push(this.add)
+            this.add=""
+
+        }
+    }
+}).mount("#app3")
 // const vm=Vue.createApp({
 //     template:`<div><p>{{ name }} = price :{{ price }} * quantity: {{ quantity }}= {{subtotal()}}</p></div>`,
 //     data(){
