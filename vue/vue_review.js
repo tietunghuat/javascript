@@ -1,13 +1,28 @@
 const{createApp,ref}=Vue
-const vm = Vue.createApp({
-    data() {
-        return {
-            text: 'Hello',
-            text1: "<h1>NIcee world!</h1>"
+// const vm = Vue.createApp({
+//     data() {
+//         return {
+//             text: 'Hello',
+//             text1: "<h1>NIcee world!</h1>"
 
+//         }
+//     }
+// }).mount("#app1")
+
+const am=Vue.createApp({
+    data(){
+        return{
+            count:0,
+            amount:0
+        }
+    },
+    methods:{
+        plus(amount, event){
+            console.log(event.target.tagName)
+            return this.count+=amount
         }
     }
-}).mount("#app1")
+}).mount("#app2")
 // const vm=Vue.createApp({
 //     template:`<div><p>{{ name }} = price :{{ price }} * quantity: {{ quantity }}= {{subtotal()}}</p></div>`,
 //     data(){

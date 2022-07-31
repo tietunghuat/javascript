@@ -54,6 +54,11 @@
         <!-- <input type="text" v-model.trim="message" placeholder="Type here" v-bind:class="{'error':message.length>=8}"> Please type this column -->
     </div>
 
+    <div id="app2">
+        <input v-model.number="amount">
+        <p>Count : {{count}}</p>
+        <button v-on:click="plus(amount,$event)">Click me</button>
+    </div>
 
 
 

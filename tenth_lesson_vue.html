@@ -6,13 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>10</title>
     <script src="https://unpkg.com/vue@3"></script>
+    <style>
+        .outer{
+            width:50px;
+            height:100px;
+            margin: 50px 0 15px 0;
+            color:yellow;
+            background-color: blue;
+        
+        }
+        .inner{
+            width:40px;
+            height:20px;
+            margin: 50px 0 15px 0;
+            color:red;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
     <div id="app1">
+        <p><input type="text" v-model.number="amount"></p>
         <p>Count: {{count}}</p>
         <!-- [  v-on:[事件名稱]= “運算式”  ] -->
-        <button v-on:click="plus"> Click to Plus</button>
+        <!-- 記得 event前面一定要加上 $符號 -->
+        <button @click="plus(amount, $event)"> Click to Plus</button>
+        <br>
+        <!-- <button v-on:click="alert('Hello!')">Click to call</button> -->
+        
     </div>
+
+    <div id="app2">
+        <div><p>{{msg}}</p></div>
+        <div class="outer" @click="alert('outer')">
+            <span>Outer</span>
+            <div class="inner" v-on:click.stop="alert('inner')">Inner</div>
+        </div>
+    </div>
+    
 </body>
 <script src="vue/vue_tenth.js"></script>
 </html>
