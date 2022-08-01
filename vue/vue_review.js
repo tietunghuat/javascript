@@ -24,21 +24,24 @@ const am=Vue.createApp({
     }
 }).mount("#app2")
 
-const zm=Vue.createApp({
+const om=Vue.createApp({
     data(){
         return{
-            column:"border:black solid 3px;width:150px;height:180px;",
-            message:[]
+            add:'',
+            column:"border:solid black 3px;width:150px;height:150px",
+            message: []
+            
         }
     },
     methods:{
-        addtom(){
-            this.message.push(this.add)
+        addmessage(){
+            return this.message.push(this.add),
             this.add=""
-
         }
+
     }
 }).mount("#app3")
+
 // const vm=Vue.createApp({
 //     template:`<div><p>{{ name }} = price :{{ price }} * quantity: {{ quantity }}= {{subtotal()}}</p></div>`,
 //     data(){

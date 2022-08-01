@@ -63,13 +63,11 @@
 
     <div id="app3">
         <div :style="column">
-            <div v-for="m in message"> {{m}}</div>
+            <div v-for="m in message">{{m}} </div>
         </div>
+        <input type="text" v-model.trim="add" placeholder="type here..." @keydown.enter="addmessage">
 
-        <input type="text" v-model.trim="add" @keydown.enter="addtom" placeholder="type here">
     </div>
-
-    
 
     <script src="vue/vue_review.js"></script>
 </body>

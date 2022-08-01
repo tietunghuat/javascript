@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11</title>
+    <style>
+        .aa {
+            background-color: red;
+            color: white;
+            font-size: large;
+            border: solid black;
+            width: 80px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<script src="https://unpkg.com/vue@3"></script>
+
+<body>
+    <div id="app1">
+        <input type="checkbox" v-model="isshow">isShow: {{isshow}}
+
+        <div class="aa" v-if="isshow">
+            <p>
+                v-if
+            </p>
+        </div>
+        <div class="aa" v-show="isshow">
+            <p>v-show</p>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div id="app2">
+        <p>Click: {{count}}</p>
+        <br>
+        <button @click="count++">Plus</button>
+        <button @click="count = 0">Reset</button>
+
+        <div>
+            <p v-if="count === 0"
+                style="background-color:red;color:white;border:1px solid black;width:150px;height:100px auto;">Shape
+                1</p>
+            <p v-else-if=" count <=5"
+                style="background-color:purple;color:white;border:1px solid black;width:150px;height:100px auto;">Shape
+                2</p>
+            <p v-else style="background-color:green;color:white;border:1px solid black;width:150px;height:100px auto;">
+                Shape 2</p>
+
+        </div>
+
+    </div>
+    
+
+
+</body>
+<script src="vue/vue_eleventh.js"></script>
+
+</html>
