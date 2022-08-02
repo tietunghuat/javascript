@@ -53,8 +53,55 @@
 
         </div>
 
+        <div id="app3">
+            <label>
+                picked:
+                <input type="radio" value="picka" v-model="tick">
+                <input type="radio" value="pickb" v-model="tick">
+            </label>
+            <template v-if="tick === 'picka'">
+                <p> Title A</p>
+                <p> Paragraph A</p>
+                <p> Letter A</p>
+                <p> Nice A</p>
+            </template>
+
+            <template v-else>
+                <p> Title B</p>
+                <p> Paragraph B</p>
+                <p> Letter B</p>
+                <p> Nice B</p>
+            </template>
+        </div>
+=======================================
+        <hr>
+        <div id="app4">
+            choose"
+            <label>
+                <input type="radio" value="username" v-model="login">
+                Username:
+            </label>
+            <label>
+                <input type="radio" value="email" v-model="login">
+                Email:
+            </label>
+            <hr>
+
+            <template v-if="login==='username'">
+                <label> Username:
+                    <input type="text" placeholder="type username" >
+                </label>
+            </template>
+
+            <template v-else>
+                <label> Email:
+                    <input type="text" placeholder="type email" >
+                </label>
+            </template>
+        </div>
+
     </div>
-    
+
 
 
 </body>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12</title>
+</head>
+<script src="https://unpkg.com/vue@3"></script>
+
+<body>
+    <div id="app1">
+        <ul>
+            <li v-for="(a,index) in arr">{{index}}/{{a}}</li>
+        </ul>
+    </div>
+
+    <div id="app2">
+        <ul>
+            <li v-for="(key,index,book) in add">{{index}}/{{key}}/{{book}}</li>
+        </ul>
+    </div>
+    <br>
+    <hr>
+
+    <div id="app3">
+        <p v-for="aaa in even">Even number: {{aaa}}</p>
+    </div>
+</body>
+<hr>
+<br>
+    <div id="app4">
+        <h1>To do list</h1>
+        <ul>
+            <li v-for="i in todolists" :key="i.id">
+                <label><input v-model="i.isdone" type="checkbox">{{i.title}}</label>
+            </li>
+        </ul>
+
+        <h1>Done list</h1>
+        <ul>
+            <li v-for="i in donelists" :key="i.id">
+                <label><input v-model="i.isdone" type="checkbox">{{i.title}}</label>
+            </li>
+        </ul>
+    </div>
+<script src="vue/vue_twelfth.js"></script>
+
+</html>
