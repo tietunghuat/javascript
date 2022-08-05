@@ -29,7 +29,7 @@ const om=Vue.createApp({
         return{
             add:'',
             column:"border:solid black 3px;width:150px;height:150px",
-            message: []
+            message: ["First","Second","Third"]
             
         }
     },
@@ -42,6 +42,23 @@ const om=Vue.createApp({
     }
 }).mount("#app3")
 
+const pm=Vue.createApp({
+    data(){
+        return{
+            list:[{id:"1",title:"choice1",isdone:false}
+                , { id: "2", title: "choice2", isdone: false },
+                { id: "3", title: "choice3", isdone: false }
+    ]}
+    },
+    computed:{
+        todolist(){
+            return this.list.filter(d => d.isdone ==false)
+        },
+        donelist(){
+            return this.list.filter(d => d.isdone ==true)
+        }
+    }
+}).mount("#app4")
 // const vm=Vue.createApp({
 //     template:`<div><p>{{ name }} = price :{{ price }} * quantity: {{ quantity }}= {{subtotal()}}</p></div>`,
 //     data(){

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue_Review</title>
     <style>
-        .error{
+        .error {
             font-size: 50px;
-            color:red;
+            color: red;
             font-size: bold;
         }
     </style>
 </head>
 <script src="https://unpkg.com/vue@3"></script>
+
 <body>
     <!-- <div id="temp"></div> -->
     <!-- <div id="app1">
@@ -51,7 +53,7 @@
     <div id="app1">
         <p v-text="text">nice</p>
         <p v-html="text1">nice</p>
-        <!-- <input type="text" v-model.trim="message" placeholder="Type here" v-bind:class="{'error':message.length>=8}"> Please type this column -->
+        <input type="text" v-model.trim="message" placeholder="Type here" v-bind:class="{'error':message.length>=8}"> Please type this column
     </div>
 
     <div id="app2">
@@ -69,6 +71,31 @@
 
     </div>
 
+    <div id="app4">
+        <div>
+            <label>
+                <h1>To do list</h1>
+            </label>
+            <ul>
+                <li v-for="(i,index) in todolist" :key="i.id">
+                    <label><input type="checkbox" v-model="i.isdone">{{i.title}}</label>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <label>
+                <h1>Done list</h1>
+            </label>
+            <ul>
+                <li v-for="i in donelist" :key="i.id">
+                    <label><input type="checkbox" v-model="i.isdone">{{i.title}}</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+
     <script src="vue/vue_review.js"></script>
 </body>
+
 </html>

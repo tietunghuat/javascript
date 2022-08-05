@@ -52,10 +52,10 @@ const cm=Vue.createApp({
     },
     computed:{
         todolists(){
-            return this.list.filter(d => !d.isdone)
+            return this.list.filter(d => d.isdone==false)
         },
         donelists() {
-            return this.list.filter(d => d.isdone)
+            return this.list.filter(d => d.isdone==true)
         }
 
     }
