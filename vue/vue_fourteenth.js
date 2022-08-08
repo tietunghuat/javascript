@@ -1,22 +1,20 @@
-const{createApp,ref}=Vue
+const {createApp,ref}=Vue
 
 const am=Vue.createApp({
-
+  data(){}
 })
 
-app.component('my-component',{
-  template:`<div>Hello vue!3.x</div>`,
-  data(){
+am.component('my-component',{
+  template:`<div><h1>Hello Vue world 3x!!!</h1></div>`
+})
 
-  } ,
-  props:{
+am.mount("#app1")
 
-  } ,
-  computed:{
-
-  },methods:{
-
+const bm=Vue.createApp({
+  components:{
+    "aa-component":{
+      template:`<div><p>Welcome to 3!</p></div>`
+    }
   }
-
-});
-app.mount("#app1")
+})
+bm.mount("#app2")
