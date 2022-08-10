@@ -125,3 +125,28 @@ const pm=Vue.createApp({
 
 
 
+const tm=Vue.createApp({
+    data(){
+
+    }
+})
+
+tm.component("nice-component",{
+    template:`<div><h1>Hello vue!nice~</h1></div>`
+
+})
+
+tm.mount("#app6")
+
+const im=Vue.createApp({
+    data(){
+
+    },
+    components:{
+        "seven-component":{
+            template:`<div><h1>Second vue world!nice</h1></div>`
+        }
+    }
+})
+
+im.mount("#app7")
