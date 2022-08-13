@@ -18,3 +18,15 @@ const bm=Vue.createApp({
   }
 })
 bm.mount("#app2")
+
+
+import vue_export from './vue_export.js'
+const cm=Vue.createApp({
+  data(){
+
+  },
+    components:{
+      vue_export
+    }
+})
+cm.mount("#app3")
