@@ -67,7 +67,7 @@ const pm=Vue.createApp({
 //         }
 //     },
 //     methods:{
-//         subtotal: function (){
+//         subtotal(){
 //             return this.price * this.quantity
 //         }
 //     }

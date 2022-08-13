@@ -1,4 +1,4 @@
-
+const {createApp,ref}=Vue
 const am=Vue.createApp({
     data(){},
     components:{
@@ -9,4 +9,4 @@ const am=Vue.createApp({
     }
 })
 
-am.mount("#app3")
+am.mount("#app1")

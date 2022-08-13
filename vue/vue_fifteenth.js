@@ -1,10 +1,27 @@
-import aaComponent from 'vue_fourteenth.js';
-
+const {createApp,ref}=Vue
 
 const am=Vue.createApp({
-    components:{
-        aaComponent
+    data(){
+        return{
+            nice:"haha"
+        }
     }
 })
+am.mount("#app1")
 
-am.mount("#app2")
+
+
+const bm=Vue.createApp({
+})
+
+bm.component("data-block",
+{
+    template:`<div class="block">
+    <div>Count:{{count}}</div>
+    <button @click="count++">Plus</button>
+    </div>`,
+    data(){
+        return {count:0}
+    }
+})
+bm.mount("#app2")

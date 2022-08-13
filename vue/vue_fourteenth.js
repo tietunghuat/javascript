@@ -29,4 +29,30 @@ const cm=Vue.createApp({
       vue_export
     }
 })
-cm.mount("#app3")
+cm.mount("#app3");
+
+
+  
+const dm=Vue.createApp({
+  data(){ 
+  }
+});
+
+dm.component("media-block",{
+  template:'#media-block'
+});
+
+  <script type = "text/x-template" id = "media-block" >
+    <div>
+      <div>
+        <h1>King James!</h1>
+      </div>
+      <div>
+        <p> The goat!</p>
+      </div>
+      <div>
+        <p>First pick,cavs,heat,cavs,lakers!</p>
+      </div>
+    </div>
+</script >
+dm.mount("#app4")
