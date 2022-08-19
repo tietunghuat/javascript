@@ -146,3 +146,22 @@ um.component("seven-component",{
     template:`<div><h1>Template two!!~</h1></div>`
 })
 um.mount("#app7")
+
+const zm=Vue.createApp({
+    data(){
+        return {content:"Parent content is here"}
+    }
+})
+
+zm.component("content-block",{
+    template:`<div>First: {{parentContent}}</div>
+    <div>Second: {{content}}</div>
+    `,
+    props:["parentContent"],
+    data(){
+        return{
+            content: "Child is here!"
+        }
+    }  
+})
+zm.mount("#app8")
