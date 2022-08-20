@@ -1,4 +1,4 @@
-const{createApp,ref}=Vue
+const { createApp, ref } = Vue
 
 const am = Vue.createApp({
     data() {
@@ -13,30 +13,34 @@ const am = Vue.createApp({
 
 am.component("my-block", {
     template: `<div class="go">
-    <div>ID:<input type="text" v-model="id"></div>
-    <div>Name:<input type="text" v-model="name"></div>
-    <div>Date:<input type="text" v-model="date"></div>
+    <div>ID:<input type="text" v-model="aid"></div>
+    <div>Name:<input type="text" v-model="aname"></div>
+    <div>Date:<input type="text" v-model="adate"></div>
     </div>`
     ,
-    props:["id","name","date"]
+    props: ["id", "name", "date"]
+    ,data(){
+        return{
+            aid:this.id,aname:this.name,adate:this.date
+        }
+    }
 })
 
 am.mount("#app1")
 
-const bm=Vue.createApp({
-    data(){
-        return{
-            name:"block"
+const bm = Vue.createApp({
+    data() {
+        return {
+            name: "block"
         }
     },
-    methods:{
-        greet(){
+    methods: {
+        greet() {
             alert("Hello vue!props")
         }
     }
 })
-bm.component("new-component",{
-    template:`<div class="nice"></div>`,
+bm.component("new-component", {
+    template: `<div class="nice"></div>`,
 })
 bm.mount("#app2")
-

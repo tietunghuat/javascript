@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+</head>
+<script src="https://unpkg.com/vue@3"></script>
+
+<body>
+    <div id="app">
+        <menu-component :title="menuData.name" :child="menuData.childNodes"></menu-component>
+    </div>
+
+    <div id="app1">
+        <my-component v-for="(book,idx)in books" :key="idx" v-bind="book" @update="updateInfo"></my-component>
+    </div>
+
+
+
+
+
+
+</body>
+<script src="vue/vue_seventeenth.js"></script>
+</html>
