@@ -18,6 +18,14 @@
         <my-component v-for="(book,idx)in books" :key="idx" v-bind="book" @update="updateInfo"></my-component>
     </div>
 
+    <div id="app2">
+        <!-- <input :value="msg" @input="msg=$event.target.value"> -->
+        <app-component   v-for="book in books" :name="book.name" ></app-component>
+    </div>
+
+
+    
+
 
 
 

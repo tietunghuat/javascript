@@ -110,6 +110,10 @@
         <h1>{{content}}</h1>
         <content-block :parent-content="content"></content-block>
     </div>
+=================================================================
+    <div id="app9">
+        <ha-component  v-for="post in posts" :key="post.id" :title="post.name"></ha-component>
+    </div>
     <script src="vue/vue_review.js"></script>
 </body>
 

@@ -99,12 +99,34 @@ const bm = Vue.createApp({
             { id: 3, name: "davis", date: "12/28" }]
         }
     },
-    methods:{
-        updatedInfo(val){
-            const idx=this.books.findIndex(d => d.id===val.id)
-            this.books[idx]=val
+    methods: {
+        updatedInfo(aa) {
+            const idx = this.books.findIndex(d => d.id === aa.id)
+            this.books[idx] = aa
         }
     }
 })
 
 bm.mount("#app1")
+
+const cm = Vue.createApp({
+    data() {
+        return {
+            msg: "hello world!!!", books: [{ id: 1, name: "james", date: "12/26" },
+            { id: 2, name: "king", date: "12/27" },
+            { id: 3, name: "davis", date: "12/28" }],
+            size:5
+        }
+    }
+})
+cm.component("app-component", {
+    props: ["name"],
+    emit:["enlarge-text"],
+    template: `<div><ul><li><h1>{{name}}</h1></li></ul>
+    <button @click=$emit("enlarge-text)>Bigger</button>
+    </div>`
+})
+
+cm.mount("#app2")
+
+

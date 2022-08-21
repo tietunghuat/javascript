@@ -1,4 +1,4 @@
-const{createApp,ref}=Vue
+const { createApp, ref } = Vue
 // const vm = Vue.createApp({
 //     data() {
 //         return {
@@ -9,53 +9,54 @@ const{createApp,ref}=Vue
 //     }
 // }).mount("#app1")
 
-const am=Vue.createApp({
-    data(){
-        return{
-            count:0,
-            amount:0
+const am = Vue.createApp({
+    data() {
+        return {
+            count: 0,
+            amount: 0
         }
     },
-    methods:{
-        plus(amount, event){
+    methods: {
+        plus(amount, event) {
             console.log(event.target.tagName)
-            return this.count+=amount
+            return this.count += amount
         }
     }
 }).mount("#app2")
 
-const om=Vue.createApp({
-    data(){
-        return{
-            add:'',
-            column:"border:solid black 3px;width:150px;height:150px",
-            message: ["First","Second","Third"]
-            
+const om = Vue.createApp({
+    data() {
+        return {
+            add: '',
+            column: "border:solid black 3px;width:150px;height:150px",
+            message: ["First", "Second", "Third"]
+
         }
     },
-    methods:{
-        addmessage(){
+    methods: {
+        addmessage() {
             return this.message.push(this.add),
-            this.add=""
+                this.add = ""
         }
 
     }
 }).mount("#app3")
 
-const pm=Vue.createApp({
-    data(){
-        return{
-            list:[{id:"1",title:"choice1",isdone:false}
+const pm = Vue.createApp({
+    data() {
+        return {
+            list: [{ id: "1", title: "choice1", isdone: false }
                 , { id: "2", title: "choice2", isdone: false },
-                { id: "3", title: "choice3", isdone: false }
-    ]}
+            { id: "3", title: "choice3", isdone: false }
+            ]
+        }
     },
-    computed:{
-        todolist(){
-            return this.list.filter(d => d.isdone ==false)
+    computed: {
+        todolist() {
+            return this.list.filter(d => d.isdone == false)
         },
-        donelist(){
-            return this.list.filter(d => d.isdone ==true)
+        donelist() {
+            return this.list.filter(d => d.isdone == true)
         }
     }
 }).mount("#app4")
@@ -125,43 +126,59 @@ const pm=Vue.createApp({
 
 
 
- const im=Vue.createApp({
-    data(){
+const im = Vue.createApp({
+    data() {
 
     },
-    components:{
-        "nice-component":{
-            template:`<div><h1>Template one~!</h1></div>`
+    components: {
+        "nice-component": {
+            template: `<div><h1>Template one~!</h1></div>`
         }
-        
+
     }
- })
+})
 
- im.mount("#app6")
+im.mount("#app6")
 
- const um=Vue.createApp({
-    data(){}
- })
-um.component("seven-component",{
-    template:`<div><h1>Template two!!~</h1></div>`
+const um = Vue.createApp({
+    data() { }
+})
+um.component("seven-component", {
+    template: `<div><h1>Template two!!~</h1></div>`
 })
 um.mount("#app7")
 
-const zm=Vue.createApp({
-    data(){
-        return {content:"Parent content is here"}
+const zm = Vue.createApp({
+    data() {
+        return { content: "Parent content is here" }
     }
 })
 
-zm.component("content-block",{
-    template:`<div>First: {{parentContent}}</div>
+zm.component("content-block", {
+    template: `<div>First: {{parentContent}}</div>
     <div>Second: {{content}}</div>
     `,
-    props:["parentContent"],
-    data(){
-        return{
+    props: ["parentContent"],
+    data() {
+        return {
             content: "Child is here!"
         }
-    }  
+    }
 })
 zm.mount("#app8")
+
+const lm = Vue.createApp({
+    data() {
+        return {
+            posts: [{ id: "1", name: "lakers" }, { id: "2", name: "cavs" },
+            { id: "3", name: "heat" }]
+        }
+    }
+})
+lm.component("ha-component",{
+    template:`<div><h1>{{title}}</h1></div>`,
+    props:{title:{
+        type:String 
+    }}
+})
+lm.mount("#app9")
