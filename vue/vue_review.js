@@ -182,3 +182,21 @@ lm.component("ha-component",{
     }}
 })
 lm.mount("#app9")
+
+const ym=Vue.createApp({
+    data(){
+        return{
+            msg:"look over here"
+        }
+    }
+})
+ym.component("ta-component",{
+    props:{
+        lala:{
+            type:String
+        }
+    },
+    template:`<div><p><b>{{lala}}</b></p></div>`
+})
+
+ym.mount("#app10")
