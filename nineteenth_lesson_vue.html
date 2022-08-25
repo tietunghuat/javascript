@@ -1,30 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>19</title>
     <style>
-        .aa{
+        .aa {
             border: black solid 1px;
-            width:200px ;
+            width: 200px;
         }
     </style>
 </head>
 <script src="https://unpkg.com/vue@3"></script>
+
 <body>
     <div id="app">
-        <button v-for="tab in tabs" :key="tab"  @click="current = tab">{{tab}}</button>
+        <button v-for="tab in tabs" :key="tab.id" @click="current = tab">{{tab}}</button>
         <!-- <tab-home v-if="current==='Home'"></tab-home>
         <tab-tab v-if="current==='Tab'"></tab-tab>
         <tab-ctrl v-if="current==='Ctrl'"></tab-ctrl> -->
-        <keep-alive exclude="tab-home">
-            <component :is="currentComponent"></component>
+        <keep-alive>
+            <component :is="currentComponent" @update="addmessage"></component>
         </keep-alive>
-        
+        <ul :style="ss">
+            <li v-for="m in msgs">{{m}}</li>
+        </ul>
+
+
+
     </div>
-    
+
 </body>
 <script src="vue/vue_nineteenth.js"></script>
+
 </html>

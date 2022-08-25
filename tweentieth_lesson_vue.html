@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+    <style>
+        .app22 {
+            width: 150px;
+            height: auto;
+            background-color: grey;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<script src="https://unpkg.com/vue@3"></script>
+
+<body>
+    <div id="app" class="app22">
+        <h1>{{msg}}</h1>
+        <br>
+        <app-component></app-component>
+    </div>
+
+    <div id="app1">
+
+        <!-- 子元件內是空的 -->
+        <light-box>
+            <template v-slot:header>
+                <h1>好棒！</h1>
+            </template>
+            <template v-slot:footer>
+                <h1>這是footer</h1>
+            </template>
+            <div><a href="https://www.instagram.com/?theme=dark" target="_blank">購買鏈接</a></div>
+        </light-box>
+    </div>
+</body>
+<script src="vue/vue_tweentieth.js"></script>
+
+</html>
