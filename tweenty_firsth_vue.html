@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+    <link href="scss/vue_tweenty_first.scss" rel="stylesheet/css">
+
+    <style>
+        
+        .block{
+            background-color: rgb(89, 167, 89);
+        }
+    </style>
+</head>
+<script src="https://unpkg.com/vue@3"></script>
+<body>
+    <div id="app">
+        <div style="height: 120px;">
+            <transition>
+                <div class="block" v-show="isShow">HELLO VUE</div>
+            </transition>
+        </div>
+    
+        <button @click="isShow =! isShow">Toggle</button>
+    </div>
+</body>
+<script src="vue/vue_tweenty_firsth.js"></script>
+
+</html>

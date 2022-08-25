@@ -1,0 +1,35 @@
+#app {
+    position: relative;
+    display: block;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+button {
+    font-size: 1rem;
+}
+
+.block {
+    display: block;
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    background-color: #0f0;
+
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 1s;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
+
+.v-enter-to,
+.v-leave-from {
+    opacity: 1;
+}

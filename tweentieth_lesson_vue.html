@@ -13,6 +13,14 @@
             background-color: grey;
             border: 1px solid black;
         }
+        .op{
+            background-color: grey;
+            border: 1px solid black;
+            border-radius: 3px;
+            margin-left: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     </style>
 </head>
 <script src="https://unpkg.com/vue@3"></script>
@@ -23,20 +31,43 @@
         <br>
         <app-component></app-component>
     </div>
-
+<hr>
+<br>
     <div id="app1">
-
-        <!-- 子元件內是空的 -->
+        <label v-for="op in ops" class="op">
+            <input type="radio" :value="op" v-model="slot_name">{{op}}
+        </label>
         <light-box>
-            <template v-slot:header>
+            <template v-slot:[slot_name]>
                 <h1>好棒！</h1>
             </template>
-            <template v-slot:footer>
+            <!-- <template v-slot:footer>
                 <h1>這是footer</h1>
             </template>
-            <div><a href="https://www.instagram.com/?theme=dark" target="_blank">購買鏈接</a></div>
+            <template v-slot:body>
+                <div><a href="https://www.instagram.com/?theme=dark" target="_blank">購買鏈接</a></div>
+            </template>  -->
         </light-box>
     </div>
+
+    <div id="app2">
+        <p>
+            請選擇:
+            <select v-model="lang">
+                <option v-for="n in langOptions" :value="n.val">     
+                    {{ n.name }}
+                </option>
+            </select>
+        </p>
+    
+        <light-box :lang="lang">
+            <template v-slot:default="{ hello }">
+                {{ langOptions.find(d => d.val === lang)['name'] }}:
+                {{ hello }}
+            </template>
+        </light-box>
+    </div>
+
 </body>
 <script src="vue/vue_tweentieth.js"></script>
 

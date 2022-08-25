@@ -12,7 +12,7 @@ const { createApp, ref } = Vue
 const am = Vue.createApp({
     data() {
         return {
-            count: 0,
+            count: 0,  
             amount: 0
         }
     },
